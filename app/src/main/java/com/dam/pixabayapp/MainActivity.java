@@ -1,6 +1,7 @@
 package com.dam.pixabayapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         itemArrayList = new ArrayList<>();
         requestQueue = Volley.newRequestQueue(MainActivity.this);
         recyclerView=findViewById(R.id.recycler);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
     }
 
     private void newSearch() {
